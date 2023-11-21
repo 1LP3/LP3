@@ -1,0 +1,23 @@
+def fibonacci(n):
+    a, b = 1, 1
+    sequence = [a, b]
+
+    for _ in range(n - 2):
+        c = a + b
+        sequence.append(c)
+        a, b = b, c
+
+    return sequence
+
+def main():
+    n = 5  # Set the number of Fibonacci numbers to generate
+    fib_sequence = fibonacci(n)
+
+    # Print the Fibonacci sequence
+    print("Fibonacci Sequence:", fib_sequence)
+
+    # Print the step count
+    print("Step count:", len(fib_sequence))
+
+if __name__ == "__main__":
+    main()
